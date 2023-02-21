@@ -1,0 +1,189 @@
+$primary-color: #f7b100;
+
+@import 'animate.css';
+@import '~loaders.css/src/animations/pacman.scss';
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('./assets/fonts/helvetica-neu.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'La Belle Aurore';
+  src: url('./assets/fonts/LaBelleAurore.woff2') format('woff2'),
+    url('./assets/fonts/LaBelleAurore.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Coolvetica';
+  src: url('./assets/fonts/CoolveticaRg-Regular.woff2') format('woff2'),
+    url('./assets/fonts/CoolveticaRg-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+input,
+textarea {
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  will-change: contents;
+  height: 98%;
+  min-height: 566px;
+  position: absolute;
+  opacity: 0;
+  top: 1%;
+  margin: 0 auto;
+  z-index: 1;
+  transform-style: preserve-3d;
+  animation: fadeIn 1s 1s forwards;
+}
+
+.main-container {
+  margin: 0;
+  font-family: 300 -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #444;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f7f7f7;
+  overflow: hidden;
+  display: block;
+  display: flex;
+}
+
+main {
+  font-size: 62.5%;
+  padding: 10px;
+}
+
+.title {
+  font-size: 3rem;
+  display: grid;
+  place-items: center;
+}
+
+.loader-active {
+  display:block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  animation: fadeOut 1s 1s;
+  animation-fill-mode: forwards;
+}
+
+/* Sidebar */
+.sidebar {
+  background: rgb(221,214,255);
+  color: rgb(72,72,72);
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.top_section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 2px 0px -1px;
+  padding: 13px 10px;
+  cursor: pointer;
+}
+.logo {
+  font-size: 20px;
+  line-height: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  height: 30px;
+  padding: 8px;
+}
+.search input {
+  border: none;
+  margin-left: 5px;
+  border-radius: 5px;
+  background: rgb(238, 238, 238);
+  color: rgb(72,72,72);
+}
+.search_icon {
+cursor: pointer;
+}
+
+
+.routes {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.link {
+  display: flex;
+  color: rgb(72,72,72);
+  font-weight: 500;
+  gap: 10px;
+  padding: 5px 10px;
+  border-right: 4px solid transparent;
+  transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+.link:hover {
+  border-right: 6px solid white;
+  background: rgb(45, 51, 89);
+  color: white;
+  transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+.active {
+  border-right: 6px solid white;
+  background: rgb(45, 51, 89);
+  color: white;
+}
+.link_text {
+  white-space: nowrap;
+  font-size: 15px;
+}
+
+.menu {
+  display: flex;
+  color: rgb(72,72,72);
+  font-weight: 500;
+  padding: 5px 10px;
+  border-right: 4px solid transparent;
+  transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  justify-content: space-between;
+  cursor: pointer;
+}
+.menu_item {
+  display: flex;
+  gap: 10px;
+}
+.menu_container {
+  display: flex;
+  flex-direction: column;
+}
+.menu_container .link {
+  padding-left: 20px;
+  font-weight: 500;
+  border-bottom: #fff 0.5px solid;
+}

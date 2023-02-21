@@ -1,0 +1,91 @@
+.logo_container {
+    z-index: 0;
+    width: 400px;
+    height: 609px;
+    position: absolute;
+    top: 35%;
+    right: 10%;
+    bottom: 0;
+    left: auto;
+    margin: auto;
+    opacity: 0;
+    cursor:grab;
+
+    .shadow {
+        position: absolute;
+        top: 76%;
+        left: 48%;
+        width: 600px;
+        height: 30px;
+        transition: .4s;
+        transform: translateX(-50%);
+        -webkit-transition: .4s;
+        -webkit-transform: translateX(-50%);
+        -moz-transition: .4s;
+        -moz-transform: translateX(-50%);
+        
+        border-radius: 100%;
+        background: radial-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.0), rgba(0,0,0,0.0));
+    }
+
+    svg {
+        width: 100%;
+        height: auto;
+        bottom: 0;
+        -webkit-transition: .4s;
+        -moz-transition: .4s;
+        transition: .4s;
+    }
+
+    .fill_logo {
+        position: absolute;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: 0;
+        margin: auto;
+        width: 100%;
+        opacity: 0;
+        z-index: 2; 
+        -webkit-transition: .4s;
+        -moz-transition: .4s;
+        transition: .4s;  
+    }
+
+    .paypal {
+        position: absolute;
+        top: 9.5%;
+        right: auto;
+        bottom: auto;
+        left: 14.5%;
+        margin: auto;
+        width: 71%;
+        z-index: 1;
+        -webkit-transition: .4s;
+        -moz-transition: .4s;
+        transition: .4s;
+        opacity: 0;
+    }
+
+    &:hover {
+        .fill_logo, svg {
+			transform: translateY(50px);
+			-webkit-transform: translateY(50px);
+			-moz-transform: translateY(50px);
+		}
+        .paypal{
+            transform: translateY(-90px);
+			-webkit-transform: translateY(-90px);
+			-moz-transform: translateY(-100px);
+        }
+        filter: drop-shadow(0 0 0.75rem crimson);
+        .shadow{
+            width: 400px;
+        }
+    }
+}  
+
+.svg_container {
+    stroke: #002434;
+    stroke-width: 20px;
+}

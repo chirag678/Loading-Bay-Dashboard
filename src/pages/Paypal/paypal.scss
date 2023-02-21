@@ -1,0 +1,49 @@
+.paypal_page {
+    background: #e6e6e6b4;
+    display: flex;   
+    
+    h1 {
+        top: -2%;
+        left: 30%;
+        position: absolute;
+        color: #002434;
+        font-size: 100px;
+        font-family: 'Coolvetica';
+        font-weight: 400;
+    }
+    
+    h2 {
+        position: absolute;
+        top: 21.8%;
+        left: 33%;
+        color: #8d8d8d;
+        font-weight: 400;
+        font-size: 18px;
+        font-family: sans-serif;
+        letter-spacing: 0.5px;
+        animation: fadeIn 1s 1.8s backwards;
+    }
+    
+    .paypal {
+        position: absolute;
+        top: 30%;
+        right: auto;
+        bottom: auto;
+        left: 28.5%; 
+        margin: auto;
+        width: 400px;
+        z-index: 1;
+        -webkit-transition: .4s;
+        -moz-transition: .4s;
+        transition: .4s;
+        opacity: 1;
+    }
+    
+    .paypal:hover {
+        transform: scale(1.35);
+        -webkit-transform: scale(1.35);
+        -moz-transform: scale(1.35);
+        cursor: grab;
+        filter: drop-shadow(0 0 0.75rem crimson);
+    }
+}

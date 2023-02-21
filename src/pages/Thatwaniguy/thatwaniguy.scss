@@ -1,0 +1,73 @@
+.me_page {
+    background: #e6e6e6b4;
+    .text_zone {
+        position: absolute;
+        left: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40%;
+        max-height: 90%;
+    }
+        h1 {
+            color: #002434;
+            font-size: 56px;
+            line-height: 53px;
+            margin: 0;
+            font-family: 'Coolvetica';
+            font-weight: 400;
+        }
+
+        h2 {
+            color: #8d8d8d;
+            margin-top: 20px;
+            font-weight: 400;
+            font-size: 16px;
+            font-family: sans-serif;
+            letter-spacing: 1px;
+            animation: fadeIn 1s 1.8s backwards;
+        }
+
+        .flat_button {
+            color: #f7b100;
+            font-size: 16px;
+            font-weight: 550;
+            letter-spacing: 4px;
+            font-family: sans-serif;
+            text-decoration: none;
+            padding: 10px 18px;
+            border: 1.1px solid #002434;
+            margin-top: 25px;
+            float: left;
+            animation: fadeIn 1s 1.8s forwards;
+            white-space: nowrap;
+            border-radius: 4px;
+            &:hover {
+                background: #f7b100;
+                color: #002434;
+                animation: wiggle 2s linear infinite;
+                @keyframes wiggle {
+                0%, 7% {
+                  transform: rotateZ(0);
+                }
+                15% {
+                  transform: rotateZ(-15deg);
+                }
+                20% {
+                  transform: rotateZ(10deg);
+                }
+                25% {
+                  transform: rotateZ(-10deg);
+                }
+                30% {
+                  transform: rotateZ(6deg);
+                }
+                35% {
+                  transform: rotateZ(-4deg);
+                }
+                40%, 100% {
+                  transform: rotateZ(0);
+                }
+                }
+            }
+        }
+}
